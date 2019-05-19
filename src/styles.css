@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~primeicons/primeicons.css';
+@import '~primeng/resources/primeng.css';
+@import '~primeng/resources/themes/nova-light/theme.css';
+@import '~bootstrap/dist/css/bootstrap.css';
+.nav-link.active{
+    background-color:white!important; 
+    border:1em #49A813!important; 
+    color : #49A813!important; 
+}
+
+.nav-link{
+    background-color:#49A813!important; 
+    border:1em #49A813!important; 
+    color : white!important; 
+}
+.nav{
+    border-radius: 0px!important;
+}
+
+.btn-margin-left {
+    margin-left: 2px;
+}
+.btn-margin-right {
+    margin-right: 2px;
+}

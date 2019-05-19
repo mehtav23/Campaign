@@ -1,0 +1,71 @@
+<div class="row" style="text-align:center!important">
+  <div class="col-12">
+    <h3>Manage <span style="color: royalblue">Campaigns</span></h3>
+  </div>
+</div>
+
+<br/>
+
+<br/>
+<br/>
+
+<div class="row" style="text-align:center!important">
+    <div class="col-1"></div>
+    <div class="col-10">
+      <nav class="nav nav-pills nav-justified">
+        <a class="nav-item nav-link  btn-margin-left btn-margin-right" (click)="changeList('upcoming')" [ngClass]="{'active': upcoming}">UPCOMING CAMPAIGNS</a>
+        <a class="nav-item nav-link btn-margin-left btn-margin-right" (click)="changeList('live')" [ngClass]="{'active': live}">LIVE CAMPAIGNS</a>
+        <a class="nav-item nav-link btn-margin-left btn-margin-right" (click)="changeList('past')" [ngClass]="{'active': past}">PAST CAMPAIGNS</a>
+      </nav>
+    </div>
+    <div class="col-1"></div>
+</div>
+
+<br/>
+
+<br/>
+<br/>
+
+
+<div class="row">
+
+  <div class="col-10">
+    <table class="table table-bordered ">
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Campaign Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of data"> 
+          <th scope="row">{{item.date | date: 'yyyy-MM-dd'}}</th>
+          <td>{{item.campaignName}}</td>
+          <td>{{item.price}}</td>
+          <td>
+            <div class="row">
+              <div class="col-2">
+                  <!-- <i class="fab fa-file-csv"></i> -->
+                  CSV
+              </div>
+              <div class="col-2">
+                  <!-- <i class="fab fa-signal"></i> -->
+                  Report
+              </div>
+              <div class="col-8 "> 
+                  <!-- <i class="fab fa-calendar-alt"></i> -->
+                  <p-calendar [showIcon]="true" [minDate]="dateTime" (onSelect)="scheduleAgain($event,item)">
+                  </p-calendar>
+                  <label>Reschedule</label>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-2"></div>
+
+</div>
