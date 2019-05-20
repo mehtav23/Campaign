@@ -3,6 +3,8 @@
 @import '~primeng/resources/primeng.css';
 @import '~primeng/resources/themes/nova-light/theme.css';
 @import '~bootstrap/dist/css/bootstrap.css';
+@import '~font-awesome/css/font-awesome.min.css';
+
 .nav-link.active{
     background-color:white!important; 
     border:1em #49A813!important; 
@@ -23,4 +25,8 @@
 }
 .btn-margin-right {
     margin-right: 2px;
+}
+
+.ui-inputtext{
+    display:none!important;
 }

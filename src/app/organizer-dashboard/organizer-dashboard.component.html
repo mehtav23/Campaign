@@ -46,19 +46,19 @@
           <td>{{item.price}}</td>
           <td>
             <div class="row">
-              <div class="col-2">
-                  <!-- <i class="fab fa-file-csv"></i> -->
-                  CSV
+              <div class="col-3">
+                <span><i class="fas fa-file-csv">
+                  
+                </i><br/>CSV</span>
               </div>
-              <div class="col-2">
-                  <!-- <i class="fab fa-signal"></i> -->
-                  Report
+              <div class="col-3">
+                <span><i class="fas fa-signal"></i>
+                  <br/>Report</span>
               </div>
-              <div class="col-8 "> 
-                  <!-- <i class="fab fa-calendar-alt"></i> -->
-                  <p-calendar [showIcon]="true" [minDate]="dateTime" (onSelect)="scheduleAgain($event,item)">
-                  </p-calendar>
-                  <label>Reschedule</label>
+              <div class="col-6 "> 
+                    <p-calendar [showIcon]="true" [minDate]="dateTime" (onSelect)="scheduleAgain($event,item)">
+                    </p-calendar>
+                    <br/>Reschedule
               </div>
             </div>
           </td>
