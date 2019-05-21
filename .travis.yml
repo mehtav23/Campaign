@@ -21,6 +21,7 @@ cache:
   
 script:
   - ng build --prod --base-href https://mehtav23.github.io/campaign/
+  - mv dist/campaign-organizer/index.html dist/campaign-organizer/404.html
 deploy:
   provider: pages
   skip-cleanup: true
