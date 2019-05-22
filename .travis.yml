@@ -1,14 +1,26 @@
 language: node_js
 node_js:
   - "8.11"
-before_install:
-- npm install -g @angular/cli
-install: npm install
-branches:
-  only:
-  - master
+before_script:
+  - npm install -g @angular/cli
+
+addons:
+  chrome: stable
+
+cache:
+  yarn: true
+directories:
+    - node_modules
+script:
+  - ng build --prod --base-href /campaign/
+  - mv dist/campaign-organizer/index.html dist/campaign-organizer/404.html
+
 deploy:
-  provider: heroku
-  api_key:
-    secure: $heroku_key
-  app: campaign-organizer
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  local-dir: dist/campaign-organizer
+  on: 
+    branch: master
+
