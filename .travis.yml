@@ -10,5 +10,5 @@ branches:
 deploy:
   provider: heroku
   api_key:
-    secure: 0f760b23-2242-4227-b27c-2eada217967b
+    secure: $heroku_key
   app: campaign-organizer
