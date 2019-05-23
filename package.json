@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node server/server.js",
+    "start": "node server.js",
     "build": "ng build",
-    "server": "nodemon server/server.js",
+    "server": "nodemon server.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install  && npm run build"
   },
   "engines": {
