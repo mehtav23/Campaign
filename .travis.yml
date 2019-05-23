@@ -4,23 +4,9 @@ node_js:
 before_script:
   - npm install -g @angular/cli
 
-addons:
-  chrome: stable
-
-cache:
-  yarn: true
-directories:
-    - node_modules
-script:
-  - ng build --prod
-  - mv dist/campaign-organizer/index.html dist/campaign-organizer/404.html
 
 deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  keep-history: true
-  local-dir: dist/campaign-organizer
-  on: 
-    branch: master
-
+  provider: heroku
+  api_key:
+    secure: $HEROKU_TOKEN
+  app: "campaign-organizer"
